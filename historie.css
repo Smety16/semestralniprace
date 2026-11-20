@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    border-bottom: 4px solid goldenrod;
+}
+
+.logo{
+    width: 36%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 25px;
+    gap: 15px;
+    border-right: 4px solid goldenrod;
+    text-decoration: none;
+    color: black;
+}
+
+.logo img{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.logo h1{
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+.logo h1:hover{
+    color: goldenrod;
+}
+
+nav{
+    width: 64%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+    font-size: 28px;
+    font-weight: bold;
+    border-right: 4px solid goldenrod;
+    border-bottom: 4px solid goldenrod;
+}
+
+nav a:nth-child(n+4){
+    border-bottom: none;
+}
+
+nav a:hover{
+    color: goldenrod;
+}
+.historie {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    display: block;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 60px 25px;
+    background: repeating-linear-gradient(90deg,red 0px,red 156px,white 156px,white 312px);
+    text-align: center;
+    color: #171717;
+}
+
+.historie::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("./img/Stadium-of-Light.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.historie::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.68);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.historie-intro {
+    max-width: 850px;
+    margin: 0 auto 65px;
+}
+
+.malý-nadpis {
+    color: #a66b00;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-shadow: 0 0 8px rgba(255, 190, 0, 0.5);
+}
+
+.historie-intro h1 {
+    font-size: 40px;
+    margin: 15px 0;
+    line-height: 1.2;
+    color: #c8102e;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.9),
+        0 0 12px rgba(255, 0, 40, 0.35);
+}
+
+.historie-intro p {
+    font-size: 18px;
+}
+
+.historie.část {
+    margin-bottom: 65px;
+}
+
+.historie h2 {
+    font-size: 29px;
+    color: #c8102e;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a017;
+    text-shadow: 0 0 8px rgba(255, 0, 40, 0.2);
+}
+
+.historie p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+
+.historie-osa {
+    max-width: 750px;
+    margin: 40px auto 0;
+    border-left: 3px solid #e00030;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.historie-události {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.historie-události::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #ffca28;
+    border-radius: 50%;
+    left: -39px;
+    top: 5px;
+    box-shadow:
+        0 0 5px #ffca28,
+        0 0 15px rgba(255, 193, 7, 0.9);
+}
+
+.historie-události span {
+    color: #b00020;
+    font-weight: bold;
+    font-size: 17px;
+    text-shadow: 0 0 8px rgba(255, 0, 40, 0.25);
+}
+
+.historie-události h3 {
+    font-size: 22px;
+    margin: 5px 0;
+    color: #850018;
+}
+
+.historie-události p {
+    margin-bottom: 0;
+}
+
+.stadion-info {
+    max-width: 750px;
+    margin: 30px auto 0;
+}
+
+.stadion-info h3 {
+    font-size: 23px;
+    color: #c8102e;
+    margin: 30px 0 5px;
+}
+
+.trofeje-rozložení {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.trofeje-karta {
+    padding: 20px 12px;
+    text-align: center;
+
+    border: 1px solid rgba(200, 16, 46, 0.4);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    transition: 0.3s;
+}
+
+.trofeje-karta img {
+    width: 100%;
+    max-width: 150px;
+    height: 130px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.trofeje-karta strong {
+    display: block;
+    color: #d00027;
+    text-shadow: 0 0 10px rgba(255, 0, 40, 0.35);
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.trofeje-karta h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #a0001b;
+}
+
+.trofeje-karta p {
+    font-size: 14px;
+}
+
+
+.historie-závěr {
+    max-width: 800px;
+    margin: 70px auto 45px;
+    padding-top: 25px;
+    border-top: 3px solid #d4a017;
+}
+
+
+.footer {
+    width: 100%;
+    background: linear-gradient(110deg, #850018, #d00027, #850018);
+    color: white;
+    padding: 35px 20px 20px;
+    text-align: center;
+
+    border-top: 3px solid #ffca28;
+    box-shadow: 0 -4px 20px rgba(208, 0, 39, 0.35);
+}
+
+.footer-obsah {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.65));
+}
+
+.footer-logo h2 {
+    font-size: 25px;
+    color: white;
+}
+
+.footer p {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.footer-čára {
+    height: 1px;
+    background-color: goldenrod;
+    margin: 25px 0 15px;
+}
+
+.footer .copyright {
+    font-size: 13px;
+    margin-bottom: 0;
+}
