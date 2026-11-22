@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    border-bottom: 4px solid goldenrod;
+}
+
+.logo{
+    width: 36%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 25px;
+    gap: 15px;
+    border-right: 4px solid goldenrod;
+    text-decoration: none;
+    color: black;
+}
+
+.logo img{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.logo h1{
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+.logo h1:hover{
+    color: goldenrod;
+}
+
+nav{
+    width: 64%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+    font-size: 28px;
+    font-weight: bold;
+    border-right: 4px solid goldenrod;
+    border-bottom: 4px solid goldenrod;
+}
+
+nav a:nth-child(n+4){
+    border-bottom: none;
+}
+
+nav a:hover{
+    color: goldenrod;
+}
+.kontakty {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    display: block;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 60px 25px;
+    background: repeating-linear-gradient(90deg,red 0px,red 156px,white 156px,white 312px);
+    text-align: center;
+    color: #171717;
+}
+
+.kontakty::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("./img/Stadium-of-Light.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.kontakty::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.68);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.kontakty-intro {
+    max-width: 800px;
+    margin: 0 auto 55px;
+}
+
+.kontakty-intro h1 {
+    font-size: 40px;
+    color: #c8102e;
+    margin: 15px 0;
+    text-shadow: 0 0 10px rgba(200, 16, 46, 0.2);
+}
+
+.kontakty-intro p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+.malý-nadpis {
+    color: #a66b00;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-shadow: 0 0 8px rgba(255, 190, 0, 0.5);
+}
+
+.kontakty-rozložení {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+}
+
+.kontakty-karta {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 4px solid #c8102e;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.kontakty-karta h2 {
+    color: #c8102e;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.kontakty-karta p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.kontakty-karta a {
+    color: #a0001b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.kontakty-karta a:hover {
+    color: #d4a017;
+    text-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+.socialni-site {
+    grid-column: 1 / -1;
+}
+
+.socialni-ikony {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    margin-top: 30px;
+}
+
+.socialni-odkaz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #a0001b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.socialni-odkaz img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.socialni-odkaz span {
+    font-size: 16px;
+}
+
+.socialni-odkaz:hover {
+    color: #d4a017;
+    transform: translateY(-6px);
+}
+
+.socialni-odkaz:hover img {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(200, 16, 46, 0.5));
+}
+
+.kontakty-závěr {
+    max-width: 800px;
+    margin: 65px auto 20px;
+    padding: 30px;
+    border-top: 3px solid #d4a017;
+}
+
+.kontakty-závěr h2 {
+    color: #c8102e;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.kontakty-závěr p {
+    margin-bottom: 20px;
+}
+
+.kontakty-závěr a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #c8102e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.kontakty-závěr a:hover {
+    background: #850018;
+    box-shadow: 0 0 12px rgba(200, 16, 46, 0.5);
+}
