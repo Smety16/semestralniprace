@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    border-bottom: 4px solid goldenrod;
+}
+
+.logo{
+    width: 36%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 25px;
+    gap: 15px;
+    border-right: 4px solid goldenrod;
+    text-decoration: none;
+    color: black;
+}
+
+.logo img{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.logo h1{
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+.logo h1:hover{
+    color: goldenrod;
+}
+
+nav{
+    width: 64%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+    font-size: 28px;
+    font-weight: bold;
+    border-right: 4px solid goldenrod;
+    border-bottom: 4px solid goldenrod;
+}
+
+nav a:nth-child(n+4){
+    border-bottom: none;
+}
+
+nav a:hover{
+    color: goldenrod;
+}
+.Hráči {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    display: block;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 60px 25px;
+    background: repeating-linear-gradient(90deg,red 0px,red 156px,white 156px,white 312px);
+    text-align: center;
+    color: #171717;
+}
+
+.Hráči::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("./img/Stadium-of-Light.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.Hráči::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.68);
+    z-index: -1;
+    pointer-events: none;
+}
+h2{
+    text-align: center;
+    font-size: 29px;
+    color: #c8102e;
+    margin-top: 18px;
+    padding-top: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-top: 2px solid #d4a017;
+    border-bottom: 2px solid #d4a017;
+    text-shadow: 0 0 8px rgba(255, 0, 40, 0.2);
+}
+.seznam {
+    display: inline-block;
+    text-align: center;
+    padding-left: 25px;
+    line-height: 2;
+    font-size: 17px;
+}
+
+.seznam li::marker {
+    color: #c8102e;
+}
